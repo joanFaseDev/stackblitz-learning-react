@@ -1,13 +1,21 @@
 import React from 'react';
 import './style.css';
 
-// Export the main function
+import Gallery from './Gallery.js';
+import { MainTitle } from './Title.js';
+import { SubTitle } from './Title.js';
+
+// Export the main function (A file cannot have more than one default export)
 export default function App() {
   return (
     <div>
-      <h1>Hello StackBlitz!</h1>
+      <MainTitle content="Let's have fun while learning React!" />
+      <SubTitle content="Quick introduction" />
       <Presentation />
+      <SubTitle content="About Components" />
       <ComponentFeatures />
+      <SubTitle content="Some famous programmers!" />
+      <Gallery />
     </div>
   );
 }
@@ -56,3 +64,26 @@ function ComponentFeatures() {
     </ul>
   );
 }
+
+/**
+ * Components can render other components but their definition must never be nest.
+ * Here, Photo components are nested within Gallery but nonetheless Photo is defined outside of Gallery.
+ */
+// function Photo() {
+//   return (
+//     <img
+//       src="https://picsum.photos/id/64/300"
+//       alt="A young girl bathing in the sun"
+//     />
+//   );
+// }
+
+// function Gallery() {
+//   return (
+//     <div className="gallery">
+//       <Photo />
+//       <Photo />
+//       <Photo />
+//     </div>
+//   );
+// }
