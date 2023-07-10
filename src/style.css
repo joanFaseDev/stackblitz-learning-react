@@ -1,3 +1,9 @@
+@media (prefers-reduced-motion: no-preference) {
+  * {
+    scroll-behavior: smooth;
+  }
+}
+
 *,
 *::before,
 *::after {
@@ -35,19 +41,39 @@ figcaption {
   padding: 0.3rem;
 }
 
+a {
+  text-decoration: none;
+  color: inherit;
+  font-weight: bold;
+  font-family: monospace;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: all 0.3s linear;
+}
+
+a:hover {
+  letter-spacing: 4px;
+}
+
+.navbar {
+  margin-top: 3.5rem;
+}
+
 .react {
   color: rgb(45, 93, 156);
 }
 
-.features {
+.features,
+.list {
   width: 80%;
   list-style: none;
   padding: 1rem;
-  margin: 1rem auto;
+  margin: 1.5rem auto 1rem;
   border: 2px solid orange;
 }
 
-.features-item {
+.features-item,
+.list li {
   margin: 1rem 0;
 }
 
@@ -66,5 +92,13 @@ figcaption {
 }
 .sub-title {
   font-size: 1.3rem;
-  margin: 1.5rem 0 0.5rem;
+  margin: 4rem 0 0.5rem;
+}
+
+.paragraph {
+  margin: 1.5rem;
+}
+
+.justified {
+  text-align: justify;
 }
